@@ -91,11 +91,11 @@ Through this project, I practiced:
 
 ### Desktop View
 
-![Desktop View](/home/user/elevate-internship/elevate-task-2/screenshots)
+![Desktop View](/home/user/elevate-internship/elevate-task-2/screenshots/desktop.png)
 
 ### Mobile View
 
-![Mobile View](/home/user/elevate-internship/elevate-task-2/screenshots)
+![Mobile View](/home/user/elevate-internship/elevate-task-2/screenshots/mobile.png)
 
 ## Internship
 

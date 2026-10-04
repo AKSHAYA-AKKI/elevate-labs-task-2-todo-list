@@ -1,0 +1,344 @@
+/* ==============================
+   GENERAL STYLES
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    background: #f4f6fb;
+    color: #1f2937;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+================================= */
+
+.todo-container {
+    width: 100%;
+    max-width: 650px;
+
+    background: #ffffff;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==============================
+   HEADING
+================================= */
+
+.todo-container h1 {
+    font-size: 38px;
+    color: #111827;
+
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   TASK INPUT
+================================= */
+
+.task-input {
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.task-input input {
+    flex: 1;
+
+    padding: 14px 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.task-input input:focus {
+    border-color: #6366f1;
+
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* ==============================
+   ADD BUTTON
+================================= */
+
+.task-input button {
+    padding: 14px 22px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #6366f1;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.task-input button:hover {
+    background: #4f46e5;
+
+    transform: translateY(-2px);
+}
+
+.task-input button:active {
+    transform: translateY(0);
+}
+
+
+/* ==============================
+   TASK STATISTICS
+================================= */
+
+.task-stats {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 15px 18px;
+
+    margin-bottom: 20px;
+
+    background: #f8fafc;
+
+    border-radius: 10px;
+
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+.task-stats strong {
+    color: #111827;
+}
+
+
+/* ==============================
+   TASK LIST
+================================= */
+
+#taskList {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+/* ==============================
+   INDIVIDUAL TASK
+================================= */
+
+.task-item {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.task-item:hover {
+    border-color: #c7d2fe;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==============================
+   TASK TEXT
+================================= */
+
+.task-text {
+    flex: 1;
+
+    color: #374151;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    word-break: break-word;
+}
+
+
+/* ==============================
+   COMPLETED TASK
+================================= */
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+
+    color: #9ca3af;
+}
+
+
+/* ==============================
+   DELETE BUTTON
+================================= */
+
+.delete-btn {
+    border: none;
+
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #fecaca;
+}
+
+
+/* ==============================
+   EMPTY MESSAGE
+================================= */
+
+.empty-message {
+    text-align: center;
+
+    padding: 30px 10px;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+================================= */
+
+/* Tablets */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .todo-container {
+        padding: 30px;
+    }
+
+    .todo-container h1 {
+        font-size: 32px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .todo-container {
+        padding: 25px 20px;
+
+        border-radius: 15px;
+    }
+
+    .todo-container h1 {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input input,
+    .task-input button {
+        width: 100%;
+    }
+
+    .task-stats {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .task-item {
+        padding: 13px 14px;
+    }
+
+    .task-text {
+        font-size: 14px;
+    }
+
+    .delete-btn {
+        padding: 7px 10px;
+    }
+}

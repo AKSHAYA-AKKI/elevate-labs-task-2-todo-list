@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | To-Do List</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="todo-container">
+
+        <h1>TaskFlow</h1>
+
+        <p class="subtitle">
+            Organize your day, one task at a time.
+        </p>
+
+        <!-- Add Task Area -->
+        <div class="task-input">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+            >
+
+            <button id="addTaskBtn">
+                Add Task
+            </button>
+
+        </div>
+
+        <!-- Task Statistics -->
+        <div class="task-stats">
+
+            <span>
+                Total: <strong id="totalTasks">0</strong>
+            </span>
+
+            <span>
+                Completed: <strong id="completedTasks">0</strong>
+            </span>
+
+        </div>
+
+        <!-- Task List -->
+        <ul id="taskList"></ul>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
